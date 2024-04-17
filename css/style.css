@@ -1,0 +1,1292 @@
+
+
+/**************** Сторонние зачения ****************/
+
+/* скролл */
+html{
+    scroll-behavior: smooth;
+}
+
+/* Шрифт */
+@font-face{
+    font-family: "Myriad Pro regul";
+    src: url(../font/MYRIADPRO-REGULAR.OTF);
+}
+
+/* цвета */
+:root{
+    --color-back_h_f:#daddef;
+    --color-back1:#c5c8d6;
+    --color-back2:#f2f2f4;
+    --color-blue:#6670ff;
+    --color-write:#fff;
+    --color-black:#000;
+    --color-bluehov:#4249ab;
+    --color-whatsapp:#46aa4f;
+    --color-black2:#3b3b3b;
+    --color-red:#e31111;
+}
+
+*{
+    font-family: "Myriad Pro regul";
+  
+}
+div>h2{
+    margin: 0;
+    padding: 1vw 0 ;
+}
+a{
+    text-decoration: none;
+    color:var(--color-black);
+}
+
+
+
+
+
+
+/* анимации */
+@keyframes moveNext{
+    0% {
+        right: 1.5vw;
+    }
+    100% {
+        right: -15vw;
+    }
+}
+
+
+@keyframes moveforward{
+    0% {
+        right: -15vw;
+    }
+    100% {
+        right: 1.5vw;
+    }
+}
+
+
+
+
+
+
+
+
+/* кнопка вверх */
+.scrool-Btn{
+    right: -10vw;
+    bottom: 8vh;
+    width:3vw;
+    height: 3vw;
+    border-radius: 50%;
+    padding: 0.2vw;
+    background-color: var(--color-write);
+    position: fixed;
+    box-shadow: var(--color-black2) 0px 0px 55px 0px;
+    cursor: pointer;
+    opacity: 0.5;
+    transition: all 0.2s;
+    display: none;
+    animation-duration:1s;
+    animation-fill-mode:forwards;
+}
+.scrool-Btn:hover{
+    opacity: 1;
+}
+.scrool-Btn:active{
+    background-color: var(--color-back1);
+    box-shadow: var(--color-back2) 0px 0px 45px 0px;
+    opacity: 0.5;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/**************** Шапка ****************/
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--color-back_h_f);
+    padding: 1vw 2vw;
+}
+.Logo{
+    font-size: 1.5vw;
+    font-weight: bold;
+    color: var(--color-blue);
+}
+.links-heder_ul{
+    display: flex;
+}
+.links-heder_li{
+    list-style: none;
+}
+.links-header_item{
+    margin-left: 1.5vw;
+    font-size: 1.3vw;
+    transition: all 0.2s;
+}
+
+.links-header_item:hover{
+    color: var(--color-blue);
+}
+
+.links-header_item:active{
+    color: var(--color-write);
+}
+
+.links-header_botton{
+    background-color: var(--color-blue);
+    padding: 0.5vw 2vw;
+    color: var(--color-write);
+    border-radius: 1vw;
+    font-size: 1.3vw;
+    transition: all 0.2s;
+}
+.links-header_botton:hover{
+
+    background-color: var(--color-write);
+    color: var(--color-blue);
+    
+}
+
+.links-header_botton:active{
+
+    background-color: var(--color-bluehov);
+    color: var(--color-write);
+    
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/**************** Основной контент ****************/
+
+
+.container-one{
+    background-color:var(--color-back1);
+}
+.container-two{
+    background-color: var(--color-back2);
+}
+.container-title{
+    text-align: center;
+    font-size: 2vw;
+}
+.container-title_price{
+    text-align: center;
+    font-size: 1.5vw;
+}
+
+
+
+
+
+
+
+/* о нас */
+.container-primary{
+    display: flex;
+    width: 53vw;
+    margin: 0 auto;
+    padding: 2vw 0;
+}
+.container-primary_img{
+    width: 25vw;
+}
+.container-primary_text{
+    width: 60%;
+}
+.container-primary_p{
+    font-size: 1.45vw;
+}
+
+
+
+
+
+
+
+
+/* Преимущества */
+
+.container-top_cont{
+    display: flex;
+
+}
+.container-top_item_img{
+    width: 8vw;
+}
+.container-top_item{
+    text-align: center;
+    margin: 0 auto;
+    height: 15vw;
+    width: 20vw;
+}
+.container-top_item_title{
+    font-size: 1.3vw;
+}
+.container-top_item_text{
+    height: 1vw;
+    font-size: 1.1vw;
+}
+.rem{
+     width: 5.5vw;
+     padding-bottom: 1vw;
+}
+.garan{
+    width: 6.5vw;
+}
+.procent{
+    width: 7vw;
+}
+
+
+
+
+
+
+
+/* Этапы работы */
+.container-etaps{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 5vw;
+}
+.container-etaps_item{
+    width: 17VW;
+    text-align: center;
+    height: 15vw;
+    position: relative;
+}
+.container-etaps_item:not(:last-child)::after {
+    
+    content: " ";
+    width: 20vw;
+    height: 0.4vw;
+    background: var(--color-blue);
+    position: absolute;
+    top: 9vw;
+    left: 11vw;
+  }
+
+.container-etaps_title{
+    font-size: 1.3vw;
+}
+
+
+.container-etaps_text{
+    font-size: 1vw;
+    height: 2.2vw;
+    
+}
+
+.container-etaps_num{
+    background-color: var(--color-blue);
+    border-radius: 1.5vw;
+    width: 5vw;
+    height: 5vw;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.container-etaps_num_text{
+    display: inline-block;
+    margin: 1.3vw;
+    font-size: 2vw;
+    color: white;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* Отзывы */
+.container-otz{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2vw;
+    padding-bottom: 3vw;
+}
+.container-otz_item{
+    width: 25vw;
+    background-color: var(--color-back1);
+    padding: 1vw 2vw;
+    border-radius: 4vw;
+    box-shadow: 0px 0px 0.5vw 0vw;
+    margin: 0 auto;
+    height: 15vw;
+}
+
+.container-otz_item_name{
+    display: flex;
+    align-items: center;
+}
+.container-otz_item_name-img{
+    object-fit:cover;
+    width: 6vw;
+    height: 6vw;
+    border-radius: 10vw;
+}
+.container-otz_item_name-text{
+    margin-left: 2vw;
+}
+.container-otz_item_name-title{
+    font-size: 1.5vw;
+    height: 1vw;
+}
+.container-otz_item_name-opis{
+    font-size: 1.2vw;
+    height: 1vw;
+}
+.container-otz_item_text{
+    font-size: 1.2vw;
+}
+
+
+
+
+
+
+
+
+
+
+/* фото работ */
+
+.container-photo{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 2vw 2vw;
+    gap: 2vw;
+}
+.container-photo_img{
+    object-fit: cover;
+    width: 30vw;
+    height: 20vw;
+    margin: 0 auto;
+}
+
+
+
+
+
+
+
+
+/* Цены */
+
+
+
+/* компьютеры */
+.container-remPC{
+    display: grid;
+    grid-template-columns:repeat( 3, 1fr);
+    gap: 1vw;
+    padding: 0 5vw 2vw 5vw;
+
+}
+.container-remPC_item{
+    font-size: 1.2vw;
+    background-color: var(--color-back1);
+    border-radius: 1vw;
+    padding: 0 1.3vw;
+}
+.container-remPC_item:last-child{
+    grid-column-start: 2;
+  grid-column-end: 4;
+
+}
+.container-remPC_item_pise{
+    text-align: right;
+    color: var(--color-blue);
+    font-weight: bold;
+}
+
+
+/* холодильники */
+
+.container-remHol{
+    display: grid;
+    grid-template-columns:repeat( 3, 1fr);
+    gap: 1vw;
+    padding: 0 5vw 2vw 5vw;
+
+}
+.container-remHol_item{
+    font-size: 1.2vw;
+    background-color: var(--color-back1);
+    border-radius: 1vw;
+    padding: 0 1.3vw;
+}
+
+.container-remHol_item_pise{
+    text-align: right;
+    color: var(--color-blue);
+    font-weight: bold;
+}
+
+
+
+/* предупреждение */
+.red{
+    margin: 0;
+    padding: 4vw 0 2vw 0;
+    color: var(--color-red);
+    font-weight: 100;
+}
+
+
+
+
+
+
+
+
+/* Контакты */
+.container-contact{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:3vw;
+    padding-left: 4vw;
+    padding-bottom: 2vw;
+}
+.container-contact_img{
+    width: 20vw;
+}
+.container-contact_infor{
+    width: 20vw;
+
+}
+.container-contact_infor *{
+    padding: 0;
+    margin: 0;
+}
+.container-contact_infor_fio{
+    font-size: 1.7vw;
+    color: var(--color-black2);
+    margin-bottom:2vw ;
+}
+.container-contact_infor_tomeH, .container-contact_infor_time, .container-contact_infor_tel, .container-contact_infor_num, .container-contact_infor_wat,
+.container-contact_infor_li_text{
+    font-size: 1.4vw;
+    
+}
+.container-contact_infor_tel{
+    margin-top: 2vw;
+}
+.container-contact_infor_ul{
+    padding-left: 0;
+}
+.container-contact_infor_num{
+    color: var(--color-blue);
+}
+.container-contact_infor_li{
+    list-style-type: none;
+}
+.container-contact_infor_wat{
+    margin-top: 2vw;
+}
+.whatsapp{
+    color: var(--color-whatsapp);
+}
+
+
+/**************** Футер ****************/
+
+.footer{
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--color-back_h_f);
+    padding: 0 2vw;
+    align-items:baseline;
+}
+.footer-center{
+    text-align: center;
+    font-size: 1.5vw;
+}
+.footer-tel{
+    font-size: 1.5vw;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/************** Адаптация ***********/
+
+@media only screen and (min-width:1024px) and (max-width:1400px){
+
+    /* общие */
+
+    /* кнопка */
+
+    .scrool-Btn{
+        right: -10vw;
+        bottom: 8vh;
+        width:4vw;
+        height: 4vw;
+        border-radius: 50%;
+        padding: 0.2vw;
+        background-color: var(--color-write);
+        position: fixed;
+        box-shadow: var(--color-black2) 0px 0px 55px 0px;
+        cursor: pointer;
+        opacity: 0.5;
+        transition: all 0.2s;
+        display: none;
+        animation-duration:1s;
+        animation-fill-mode:forwards;
+    }
+
+
+
+
+
+
+
+    /* Шапка */
+
+    .Logo{
+        font-size: 1.7vw;
+    }
+
+    .links-header_item{ 
+        font-size: 1.5vw;
+    }
+    .links-header_botton{
+        font-size: 1.5vw;
+    }
+
+
+
+
+
+    /* основной контент */
+
+
+    /* преимущства */
+    .container-top_cont{
+        padding-bottom: 3vw;
+    }
+    .container-top_item_title{
+        font-size: 1.5vw;
+    }
+    .container-top_item_text{
+        font-size: 1.3vw;
+    }
+
+
+
+    /* Этапы работы */
+    .container-etaps{
+        display: flex;
+        justify-content: space-between;
+        padding: 0 5vw;
+    }
+    .container-etaps_item{
+        height: 17vw;
+    }
+    .container-etaps_item:not(:last-child)::after {
+        top: 11.5vw;
+        
+      }
+    
+    .container-etaps_title{
+        font-size: 1.5vw;
+    }
+    
+    
+    .container-etaps_text{
+        font-size: 1.3vw;
+        padding-bottom: 1vw;
+        width: 18vw;
+    }
+    
+    
+    .container-etaps_num_text{
+        font-size: 2vw;
+    }
+    
+
+
+
+
+    /* Отзывы */
+    .container-otz_item{
+        height: 18vw;
+    }
+    .container-otz_item_name-title{
+        font-size: 2vw;
+    }
+    .container-otz_item_name-opis{
+        font-size: 1.4vw;
+    }
+    .container-otz_item_text{
+        font-size: 1.4vw;
+    }
+
+
+    /* цены */
+    
+
+    /* компьютеры */
+.container-remPC_item{
+    font-size: 1.5vw;
+}
+
+
+
+
+/* холодильники */
+.container-remHol_item{
+    font-size: 1.5vw;
+}
+
+
+
+/* контакты */
+
+.container-contact_infor_tomeH, .container-contact_infor_time, .container-contact_infor_tel, .container-contact_infor_num, .container-contact_infor_wat,
+.container-contact_infor_li_text{
+    font-size: 1.7vw;
+    
+}
+
+
+
+
+
+/* футер */
+.footer-center{
+    text-align: center;
+    font-size: 1.7vw;
+}
+.footer-tel{
+    font-size: 1.7vw;
+}
+}
+
+
+
+
+
+
+
+
+
+
+@media only screen and (min-width:768px) and (max-width:1023px){
+
+    /* общие */
+    .container-title{
+        font-size: 3.5vw;
+    }
+    .container-title{
+        font-size: 3vw;
+        padding-bottom: 3vw;
+    }
+    .container-title_price{
+        font-size: 3vw;
+    }
+    /* кнопка */
+
+    .scrool-Btn{
+        width:10vw;
+        height: 10vw;
+        
+    }
+
+
+
+
+
+
+
+    /* Шапка */
+
+    .Logo{
+        font-size: 2.5vw;
+    }
+    .links-heder_ul{
+        margin-right: 2vw;
+    }
+    .links-header_item{ 
+        font-size: 2vw;
+    }
+    .links-header_botton{
+        font-size: 2vw;
+    }
+
+
+
+
+
+    /* основной контент */
+
+
+    /* о нас */
+.container-primary{
+    display: flex;
+    width: 70vw;
+    margin: 0 auto;
+    padding: 2vw 0;
+}
+.container-primary_h1{
+    font-size: 3vw;
+}
+.container-primary_img{
+    width: 30vw;
+}
+.container-primary_text{
+    width: 60%;
+}
+.container-primary_p{
+    font-size: 2vw;
+}
+
+    /* преимущства */
+    .container-top_cont{
+        padding-bottom: 15vw;
+    }
+    .container-top_item_title{
+        font-size: 2.3vw;
+    }
+    .container-top_item_text{
+        font-size: 2vw;
+    }
+    .speed{
+        width: 9vw;
+    }
+    .rem{
+        width: 7vw;
+        padding-bottom: 1vw;
+   }
+   .garan{
+       width: 8vw;
+   }
+   .procent{
+       width: 9vw;
+   }
+   
+
+
+
+
+    /* Этапы работы */
+    .container-etaps{
+        display: flex;
+        justify-content: space-between;
+        padding: 0 4vw;
+    }
+    .container-etaps_item{
+        height: 28vw;
+    }
+    .container-etaps_item:not(:last-child)::after {
+        top: 20.5vw;
+        height: 1vw;
+        width: 24vw;
+      }
+    
+    .container-etaps_title{
+        font-size: 2.5vw;
+    }
+    
+    
+    .container-etaps_text{
+        font-size: 2vw;
+        padding-bottom: 6vw;
+        width: 17.5vw;
+    }
+    .container-etaps_num{
+        width: 6vw;
+        height: 6vw;
+    }
+    
+    
+    .container-etaps_num_text{
+        font-size: 3vw;
+    }
+    
+
+
+
+
+    /* Отзывы */
+    .container-otz_item{
+        height: 34vw;
+        width: 40vw;  
+    }
+    .container-otz_item_name-title{
+        font-size: 3vw;
+    }
+    .container-otz_item_name-opis{
+        font-size: 2vw;
+    }
+    .container-otz_item_text{
+        font-size: 2.5vw;
+    }
+
+    .container-otz_item_name-img{
+        object-fit:cover;
+        width: 9vw;
+        height: 9vw;
+        border-radius: 10vw;
+        margin-top: 2vw;
+    }
+
+
+
+
+
+
+    /* примеры */
+    .container-photo{
+        display: flex;
+        flex-wrap: wrap;
+        padding: 2vw 2vw;
+        gap: 2vw;
+    }
+    .container-photo_img{
+        object-fit: cover;
+        width: 45vw;
+        height: 30vw;
+        margin: 0 auto;
+    }
+
+
+
+
+    /* цены */
+    
+
+    /* компьютеры */
+.container-remPC_item{
+    font-size: 2.5vw;
+}
+
+
+
+
+/* холодильники */
+.container-remHol_item{
+    font-size: 2.5vw;
+}
+
+
+
+/* контакты */
+.container-contact_img{
+    width: 25vw;
+}
+.container-contact_infor{
+    width: 35vw;
+
+}
+.container-contact_infor_fio{
+    font-size: 3vw;
+}
+.container-contact_infor_tomeH, .container-contact_infor_time, .container-contact_infor_tel, .container-contact_infor_num, .container-contact_infor_wat,
+.container-contact_infor_li_text{
+    font-size: 2.5vw;
+    
+}
+
+
+
+
+
+/* футер */
+.footer-center{
+    text-align: center;
+    font-size: 2.5vw;
+}
+.footer-tel{
+    font-size: 2.5vw;
+}
+}
+
+
+
+
+
+
+
+
+
+@media only screen and (min-width:240px) and (max-width:767px){
+
+
+    /* общие */
+    
+    .container-title{
+        font-size: 5vw;
+        padding-bottom: 3vw;
+    }
+    .container-title_price{
+        font-size: 4.5vw;
+    }
+    /* кнопка */
+
+    .scrool-Btn{
+        width:8vw;
+        height: 8vw;
+        
+    }
+
+
+
+
+
+
+
+    /* Шапка */
+
+    .header{
+        display: block;
+        text-align: center;
+        padding-bottom: 5vw;
+    }
+    .Logo{
+        font-size: 5vw;
+        text-align: left;
+    }
+    .links-heder{
+        margin: 4.5vw 0;
+        padding: 0;
+    }
+   .links-heder_ul{
+    margin: 0 auto;
+    gap: 1.5vw;
+    padding: 0;
+    justify-content: center;
+   }
+ 
+    .links-header_item{ 
+        padding: 0;
+        margin: 0;
+        font-size: 3.3vw;
+        
+    }
+    .links-header_botton{
+        font-size: 3vw;
+        padding: 2vw 3vw;
+    }
+
+
+
+
+
+    /* основной контент */
+
+
+    /* о нас */
+.container-primary{
+    display: flex;
+    width: 85vw;
+    margin: 0 auto;
+    padding: 2vw 4vw;
+}
+.container-primary_h1{
+    font-size: 4vw;
+}
+.container-primary_img{
+    width: 40%;
+}
+.container-primary_text{
+    width: 60%;
+}
+.container-primary_p{
+    font-size: 3vw;
+}
+
+    /* преимущства */
+    .container-top {
+        height: 75vw;
+    }
+    .container-top_cont{
+        padding-bottom: 15vw;
+        flex-wrap: wrap;
+    }
+    .container-top_item{
+        width: 40vw;
+        margin-bottom: 17vw;
+    }
+    .container-top_item_title{
+        font-size: 3.5vw;
+        
+    }
+    .container-top_item_text{
+        font-size: 3vw;
+        height: auto;
+    }
+    .speed{
+        width: 11vw;
+    }
+    .rem{
+        width: 8vw;
+        padding-bottom: 1vw;
+   }
+   .garan{
+       width: 10vw;
+   }
+   .procent{
+       width: 11vw;
+   }
+   
+
+
+
+
+    /* Этапы работы */
+    .container-etaps *{
+        
+        width: 70vw;
+        align-items: center;
+    }
+    .container-etaps{
+        display: block;
+        padding: 0 4vw;
+    }
+    .container-etaps_item{
+        height: 28vw;
+        display: flex;
+        
+    }
+    .container-etaps_item:not(:last-child)::after {
+        top: 20vw;
+        height: 17vw;
+        width: 1vw;
+        left: 64vw;
+      }
+      
+    
+    .container-etaps_title{
+        font-size: 4vw;
+        width: auto;
+    }
+    
+    
+    .container-etaps_text{
+        font-size: 3.5vw;
+        padding-bottom: 6vw;
+        width: auto;
+        height: auto;
+        padding: 0 2vw;
+    }
+    .container-etaps_num{
+        width: 14vw;
+        height: 12vw;
+    }
+    
+    
+    .container-etaps_num_text{
+        font-size: 6vw;
+        width:auto;
+    }
+    
+
+
+
+
+    /* Отзывы */
+    .container-otz{
+        display: block;
+    }
+    .container-otz_item{
+        height: 34vw;
+        width: 85vw; 
+        margin-bottom: 4vw; 
+    }
+    .container-otz_item_name-title{
+        font-size: 4vw;
+    }
+    .container-otz_item_name-opis{
+        font-size: 3vw;
+    }
+    .container-otz_item_text{
+        font-size: 3vw;
+    }
+
+    .container-otz_item_name-img{
+        object-fit:cover;
+        width: 11vw;
+        height: 11vw;
+        border-radius: 10vw;
+        margin-top: 2vw;
+    }
+
+
+
+
+
+
+    /* примеры */
+    .container-photo{
+        display: flex;
+        flex-wrap: wrap;
+        padding: 2vw 2vw;
+        gap: 2vw;
+    }
+    .container-photo_img{
+        object-fit: cover;
+        width: 80vw;
+        height: 50vw;
+        margin: 0 auto;
+    }
+
+
+
+
+    /* цены */
+    
+
+    /* компьютеры */
+
+
+.container-remPC{
+    grid-template-columns:repeat(2, 1fr);
+    gap: 1vw;
+    padding: 0 5vw 2vw 5vw;
+
+}
+.container-remPC_item{
+    font-size: 4vw;
+    background-color: var(--color-back1);
+    border-radius: 1vw;
+    padding: 0 1.3vw;
+}
+.container-remPC_item:last-child{
+    grid-column-start: 1;
+  grid-column-end: 3;
+
+}
+.container-remPC_item_text{
+    height: 20vw;
+}
+.container-remPC_item_pise{
+    text-align: right;
+    
+    color: var(--color-blue);
+    font-weight: bold;
+}
+
+
+
+
+/* холодильники */
+.container-remHol{
+    grid-template-columns:repeat(2, 1fr);
+    gap: 1vw;
+    padding: 0 5vw 2vw 5vw;
+
+}
+.container-remHol_item{
+    font-size: 4vw;
+    background-color: var(--color-back1);
+    border-radius: 1vw;
+    padding: 0 1.3vw;
+}
+.container-remHol_item_text{
+    height: 20vw;
+}
+.container-remHol_item_pise{
+    text-align: right;
+    
+    color: var(--color-blue);
+    font-weight: bold;
+}
+
+
+/* контакты */
+.container-contact_img{
+    width: 20vw;
+}
+.container-contact_infor{
+    width: 45vw;
+
+}
+.container-contact_infor_fio{
+    font-size: 4vw;
+}
+.container-contact_infor_tomeH, .container-contact_infor_time, .container-contact_infor_tel, .container-contact_infor_num, .container-contact_infor_wat,
+.container-contact_infor_li_text{
+    font-size: 3.5vw;
+    
+}
+
+
+
+
+
+/* футер */
+.footer{
+    display: block;
+    text-align: center;
+    padding: 4vw 0;
+}
+.footer-center{
+    text-align: center;
+    font-size: 4vw;
+}
+.footer-tel{
+    font-size: 4vw;
+}
+}
